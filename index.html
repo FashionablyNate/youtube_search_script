@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #glcanvas { border: 3px solid white }
+            body {
+                background-color: #2F2F2F;
+                color: lightgray;
+            }
+            h1 { color: lightgray }
+        </style>
+        <title>Youtube Search Script</title>
+    </head>
+
+    <body>
+        <h1>Youtube Search Script</h1>
+
+        <label for="search_term">Search term:</label>
+        <input type="text" id="search_term" name="search_term"><br><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" value="-6.21462, 106.84513"></input>
+        <label for="location_radius">Location radius:</label>
+        <input type="text" id="location_radius" name="location_radius" value="30mi"><br><br>
+
+        <label for="rel_lang">Relevance language:</label>
+        <input type="text" id="rel_lang" name="rel_lang" value="id">
+        <label for="reg_code">Region code:</label>
+        <input type="text" id="reg_code" name="reg_code" value="ID"><br><br>
+        
+        <script src="https://apis.google.com/js/api.js"></script>
+        <script src="api.js"></script>
+        <script src="main.js"></script>
+        <button onclick="loadClient()">load</button>
+        <button onclick="execute()">execute</button>
+        <br><br>
+        <div id="hi"></div>
+    </body>
+</html>
